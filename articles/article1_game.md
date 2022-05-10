@@ -36,6 +36,7 @@ https://zenn.dev/kado17/articles/article1_introduction
 操作方法：基本左クリック、右クリックで旗を立てることができ、地雷であると考えられるものに目印をつけられます
 :::
 https://yoshi-program.github.io/minesweeper/
+https://github.com/Yoshi-program/minesweeper/blob/main/pages/index.tsx
 ↓こちらを参考にしました。
 https://minesweeper.online/
 特に難しかったのは、クリックした際、周りに一つも爆弾がない時に白マス(周りに地雷がないマスのことを私は白マスと呼んでいます)が連鎖するプログラムです。
@@ -74,7 +75,7 @@ if (!existBomb) {
       }
     }
 ```
-https://github.com/Yoshi-program/minesweeper/blob/main/pages/index.tsx#L243
+
 また、React hooksである`useState`や`useEffect`の使い方を学び、JavaScriptの書き方も上手くなりました。
 `useState`ではゲームクリアやゲームオーバーの状況管理やゲームボードの状態管理などを行いました。
 ```js:index.tsx
@@ -105,6 +106,7 @@ const [gameClear, setGameClear] = useState(false)
 操作方法：矢印 ← ↓ → が移動、矢印 ↑ 、X が右回転、Z, 左Ctrlで左回転、スペースで一気に下まで、シフトでHoldができます。また、画面のStop!を押すことで一時停止できます。
 :::
 https://yoshi-program.github.io/tetris/
+https://github.com/Yoshi-program/tetris/blob/main/pages/index.tsx
 この製作では`useMemo`や`useCallback`などの新しいことを学んだり、`uesEffect`での時間に応じたプログラムを書くことなどの練習になりました。
 
 難しかったのは**テトリミノの扱い**です。画面外にいかないようにしたり、重ならないようにするプログラムを思いつくのが大変でした。
@@ -122,7 +124,6 @@ const checkCordinate = (cx: number, cy: number, tetromino: number[][]): boolean 
     return false
   }
 ```
-https://github.com/Yoshi-program/tetris/blob/main/pages/index.tsx#L331
 
 また、回転時の処理が、周りに障害物があると上手くいかず、最後まで課題として残りましたが、無事にプログラムを書けました。↓
 テトリミノの回転状況によって処理が変わるため、三項演算子でプログラムが複雑っぽくなっています。しかし、回転した時に周りにそのテトリミノが存在できる空間があるかを、For文で`moveX`, `moveY`を一定まで増やして判定し、空間があった場合にその`moveX`, `moveY`分動いてから、その回転の処理を行うというシンプルなプログラムです。
@@ -184,7 +185,7 @@ https://github.com/Yoshi-program/tetris/blob/main/pages/index.tsx#L331
     [x, y, tetromino, rotateNumber]
   )  
 ```
-https://github.com/Yoshi-program/tetris/blob/main/pages/index.tsx#L469
+https://github.com/Yoshi-program/tetris/blob/main/pages/index.tsx#L469-L514
 
 全体の反省点としてはコードがとても読みづらいことです。特にテトリミノをリセットする関数やホールドを行う関数は変数の更新が多くて、私目線すごく汚く見えました。
 
