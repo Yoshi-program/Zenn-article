@@ -36,7 +36,7 @@ https://zenn.dev/kado17/articles/article1_introduction
 操作方法：基本左クリック、右クリックで旗を立てることができ、地雷であると考えられるものに目印をつけられます
 :::
 https://yoshi-program.github.io/minesweeper/
-https://github.com/Yoshi-program/minesweeper/blob/main/pages/index.tsx
+https://github.com/Yoshi-program/minesweeper/
 ↓こちらを参考にしました。
 https://minesweeper.online/
 特に難しかったのは、クリックした際、周りに一つも爆弾がない時に白マス(周りに地雷がないマスのことを私は白マスと呼んでいます)が連鎖するプログラムです。
@@ -106,7 +106,7 @@ const [gameClear, setGameClear] = useState(false)
 操作方法：矢印 ← ↓ → が移動、矢印 ↑ 、X が右回転、Z, 左Ctrlで左回転、スペースで一気に下まで、シフトでHoldができます。また、画面のStop!を押すことで一時停止できます。
 :::
 https://yoshi-program.github.io/tetris/
-https://github.com/Yoshi-program/tetris/blob/main/pages/index.tsx
+https://github.com/Yoshi-program/tetris/
 この製作では`useMemo`や`useCallback`などの新しいことを学んだり、`uesEffect`での時間に応じたプログラムを書くことなどの練習になりました。
 
 難しかったのは**テトリミノの扱い**です。画面外にいかないようにしたり、重ならないようにするプログラムを思いつくのが大変でした。
